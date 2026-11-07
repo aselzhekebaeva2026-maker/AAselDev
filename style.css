@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: #f4f7ff;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  max-width: 1150px;
+  margin: auto;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #42e8d1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: #b7c0d5;
+}
+
+nav a:hover {
+  color: #42e8d1;
+}
+
+.nav-button,
+.primary-button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 9px;
+  background: #42e8d1;
+  color: #07131b;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  border: 0;
+  font-size: 27px;
+}
+
+.hero {
+  max-width: 1150px;
+  margin: auto;
+  padding: 110px 24px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.eyebrow {
+  color: #42e8d1;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: 1.12;
+  margin-bottom: 25px;
+}
+
+h1 span {
+  color: #42e8d1;
+}
+
+.hero-text {
+  color: #aab5cc;
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+
+.hero-card,
+.card,
+.project-card {
+  background: #151e32;
+  border: 1px solid #26354d;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.code-top {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 25px;
+}
+
+.code-top span {
+  width: 10px;
+  height: 10px;
+  background: #42e8d1;
+  border-radius: 50%;
+}
+
+pre {
+  color: #d6e2f7;
+  white-space: pre-wrap;
+  font-size: 13px;
+}
+
+.code-purple {
+  color: #c69cff;
+}
+
+.code-green {
+  color: #42e8d1;
+}
+
+.section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 75px 24px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card h3,
+.project-card h3 {
+  margin: 12px 0;
+}
+
+.card p,
+.project-card p,
+.about > p:not(.eyebrow),
+.contact > p:not(.eyebrow) {
+  color: #aab5cc;
+}
+
+.card-icon {
+  color: #42e8d1;
+  font-size: 32px;
+}
+
+.projects {
+  background: #10182a;
+  max-width: 100%;
+  padding-left: max(24px, calc((100% - 1102px) / 2));
+  padding-right: max(24px, calc((100% - 1102px) / 2));
+}
+
+.project-card {
+  padding: 18px;
+}
+
+.project-preview {
+  height: 170px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.preview-one {
+  background: linear-gradient(135deg, #233b69, #397e89);
+}
+
+.preview-two {
+  background: linear-gradient(135deg, #49316d, #a45e87);
+}
+
+.tag,
+.skills span {
+  display: inline-block;
+  color: #42e8d1;
+  background: #1c3040;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.disclaimer {
+  color: #8995ad;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.about {
+  max-width: 850px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact {
+  text-align: center;
+  background: #151e32;
+  border-radius: 18px;
+  margin-bottom: 65px;
+}
+
+.contact .primary-button {
+  margin-top: 25px;
+}
+
+footer {
+  max-width: 1150px;
+  margin: auto;
+  padding: 25px 24px;
+  display: flex;
+  justify-content: space-between;
+  color: #8995ad;
+}
+
+@media (max-width: 700px) {
+  .header {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 15px;
+    right: 15px;
+    z-index: 10;
+    background: #151e32;
+    border: 1px solid #26354d;
+    border-radius: 12px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 65px;
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 29px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
